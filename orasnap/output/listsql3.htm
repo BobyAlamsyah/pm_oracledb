@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Expires" CONTENT="Mon, 06 Jan 1990 00:00:01 GMT">
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+</HEAD>
+<BODY BGCOLOR="#C0C0C0">
+<CENTER><FONT FACE="Arial" SIZE="2">
+<TABLE WIDTH="100%">
+<TR>
+<TD><B><FONT FACE="Arial" SIZE="2"><A HREF="listsql3.htm" TARGET="_blank">04-FEB-2020 16:57:49</A></FONT></B></TD>
+<TD ALIGN="RIGHT"><B><FONT FACE="Arial" SIZE="2">IDXUT</FONT></B></TD>
+</TR>
+</TABLE><BR>
+<TABLE BORDER=1 CELLPADDING=5>
+<TR>
+<TD ALIGN="CENTER" BGCOLOR="#FFFFFF" COLSPAN=4>
+<FONT SIZE="4"><B>Shared Pool SQL with Most Loads (&gt;50)</B></FONT>
+</TD>
+</TR>
+<TR>
+<TD BGCOLOR="#CCCC99" ALIGN="CENTER" NOWRAP><FONT FACE="Arial" SIZE="2"><B>Loads (1)</B></FONT></TD>
+<TD BGCOLOR="#CCCC99" ALIGN="CENTER"><FONT FACE="Arial" SIZE="2"><B>First Load Time</B></FONT></TD>
+<TD BGCOLOR="#CCCC99" ALIGN="CENTER"><FONT FACE="Arial" SIZE="2"><B>Sorts</B></FONT></TD>
+<TD BGCOLOR="#CCCC99"><FONT FACE="Arial" SIZE="2"><B>SQL Text</B></FONT></TD>
+</TR>
+<TR>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">53</FONT></TD>
+	<TD ALIGN="CENTER" NOWRAP><FONT FACE="Arial" SIZE="2">2020-01-28/14:11:59</FONT></TD>
+	<TD ALIGN="CENTER" NOWRAP><FONT FACE="Arial" SIZE="2">18</FONT></TD>
+  <TD><FONT FACE="Arial" SIZE="2">-- &lt;sqlFile&gt; sfmi/component/globalcommon/globalbizcommon/dao/sqlmap/maps/GlobalGeneralCodeDaoMap.xml &lt;/sqlFile&gt; -- &lt;sqlId&gt; GI.GNselectCodeDetlByPageList &lt;/sqlId&gt; -- &lt;sql&gt;                            SELECT  a.fk_cd_kd_no          ,           (select cd_kd_name      from ncgr00TB_I      where cd_kd_no = a.fk_cd_kd_no) FK_CD_KD_NAME ,                 a.cd_detl_no     ,                 a.cd_detl_name      ,                 a.cd_detl_org
+n_name1   ,                 a.cd_detl_orgn_name2   ,                 a.cd_detl_orgn_name3   ,                 a.cd_detl_etc_name     ,                 a.CD_DETL_ENG_NAME,                 a.CD_DETL_ORGN_ENG_NAME1,                 a.CD_DETL_ORGN_ENG_NAME2,     a.CD_DETL_ORGN_ENG_NAME3,     a.CD_DETL_ETC_ENG_NAME,     a.CD_LEVEL_CLS,     a.ORDER0,                 a.use_start_date       ,                 a.use_start_date use_chg_date,                 a.use_end_date,                 a.PRC_FK_CD_KD_NO
+,     a.PRC_CD_DETL_NO,     a.LAST_UPDATE_DATE,     a.INPUT_DATE</FONT></TD>
+	</TR>
+
+</TABLE><BR>
+<FORM ACTION="../source/listsql3.htm" METHOD=GET>
+<INPUT TYPE=submit NAME=foo VALUE="Source Code"></FORM>
+</FONT></CENTER>
+<SCRIPT LANGUAGE="JavaScript" SRC="footer.js"></SCRIPT>
+</BODY></HTML>

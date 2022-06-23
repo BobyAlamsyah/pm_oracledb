@@ -1,0 +1,282 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Expires" CONTENT="Mon, 06 Jan 1990 00:00:01 GMT">
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+</HEAD>
+<BODY BGCOLOR="#C0C0C0">
+<CENTER><FONT FACE="Arial" SIZE="2">
+<TABLE WIDTH="100%">
+<TR>
+<TD><B><FONT FACE="Arial" SIZE="2"><A HREF="listsql1.htm" TARGET="_blank">04-FEB-2020 16:57:48</A></FONT></B></TD>
+<TD ALIGN="RIGHT"><B><FONT FACE="Arial" SIZE="2">IDXUT</FONT></B></TD>
+</TR>
+</TABLE><BR>
+<TABLE BORDER=1 CELLPADDING=5>
+<TR>
+<TD ALIGN="CENTER" BGCOLOR="#FFFFFF" COLSPAN=5>
+<FONT SIZE="4"><B>Shared Pool SQL with Most Disk Reads (&gt; 10000)</B></FONT>
+</TD>
+</TR>
+<TR>
+<TD BGCOLOR="#CCCC99"><FONT FACE="Arial" SIZE="2"><B>Username</B></FONT></TD>
+<TD BGCOLOR="#CCCC99" NOWRAP><FONT FACE="Arial" SIZE="2"><B>Disk Reads</B></FONT></TD>
+<TD BGCOLOR="#CCCC99" NOWRAP><FONT FACE="Arial" SIZE="2"><B>Executions</B></FONT></TD>
+<TD BGCOLOR="#CCCC99" NOWRAP><FONT FACE="Arial" SIZE="2"><B>Reads/Execs (1)</B></FONT></TD>
+<TD BGCOLOR="#CCCC99"><FONT FACE="Arial" SIZE="2"><B>SQL Text</B></FONT></TD>
+</TR>
+<TR>
+	<TD><FONT FACE="Arial" SIZE="2">IDGLOBAL</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">           3,468,499</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">                   7</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">             495,500</FONT></TD>
+	<TD><FONT FACE="Arial" SIZE="2">SELECT               CLOSE_YYMM                     as closeYymm                                      ,PLCY_NO                        as plcyNo                                        ,COVR_CD                        as covrCd                                        ,ENDO_NO                        as endoNo                                        ,COVR_CATG                      as covrCatg                                      ,PROD_CD                        as prodCd
+                                        ,LOB_DTL                        as lobDtl                                        ,CORP_CUST_TYPE                 as corpCustType                                  ,BRANCH_CLS                     as branchCls                                     ,OCC_CHNL_CLS                   as occChnlCls                                    ,AGRM_TYP                       as agrmTyp                                       ,ACCT_TYPE                      as acctType
+                                 </FONT></TD>
+	</TR>
+
+<TR>
+	<TD><FONT FACE="Arial" SIZE="2">IDGLOBAL</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">           2,299,032</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">                   5</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">             459,806</FONT></TD>
+	<TD><FONT FACE="Arial" SIZE="2">SELECT       'F501'AS BUKRS                                              ,A.CLOSE_YYMM       ,A.RCIV_DATE       ,A.RCIV_SEQ_NUM       ,A.PLCY_NO       ,A.COVR_CD       ,A.SPCL_IMI_CLS       ,A.SPCL_CONT_CD       ,A.DEAL_LINE_CD       ,A.SPCL_CONT_NM       ,A.SPCL_CONT_TYPE         ,A.DEAL_LINE_NM       ,A.CRDT_GRD       ,A.REINSP_BLNG_NTN       ,A.REINSP_NTN_CD       ,(CASE WHEN A.AGRM_TYP = '0' THEN 'D' WHEN A.AGRM_TYP = '5' THEN 'I' ELSE '' END) AS AGRM_TYP
+   ,(SELECT PROD_GRP_CODE FROM NSPD01TB_I WHERE PROD_CD = A.PROD_CD) AS COVR_CATG                   ,A.PROD_CD       ,A.LOB_DTL       ,A.CORP_CUST_TYPE       ,A.OCC_CHNL_CLS       ,B.CHNL_CD       ,B.CHNL_NM       ,B.INWARD_DEAL_LINE_CD        ,B.INWARD_DEAL_LINE_NM        ,B.INWARD_DEAL_LINE_CRDT_GRD        ,B.INWARD_DEAL_LINE_NTN        ,B.INWARD_DEAL_LINE_NTN_CD        ,B.CONTOR_CD       ,B.CONTOR_NM       ,(CASE WHEN A.PMT_OS_CLS  =  '5'   THEN   '02'                                ELSE (CAS
+E WHEN (SELECT NVL(PTY_CLS,' ')  </FONT></TD>
+	</TR>
+
+<TR>
+	<TD><FONT FACE="Arial" SIZE="2">SYS</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">             433,537</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">                   1</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">             433,537</FONT></TD>
+	<TD><FONT FACE="Arial" SIZE="2">/* SQL Analyze(1) */ select /*+  full(t)    no_parallel(t) no_parallel_index(t) dbms_stats cursor_sharing_exact use_weak_name_resl dynamic_sampling(0) no_monitoring xmlindex_sel_idx_tbl opt_param('optimizer_inmemory_aware' 'false') no_substrb_pad  */to_char(count("CORP_CHNG_DRT_TRMN_RET_AMT")),substrb(dump(min("CORP_CHNG_DRT_TRMN_RET_AMT"),16,0,64),1,240),substrb(dump(max("CORP_CHNG_DRT_TRMN_RET_AMT"),16,0,64),1,240),to_char(count("CORP_CHNG_DRT_BFM_UNEARN_PREM")
+),substrb(dump(min("CORP_CHNG_DRT_BFM_UNEARN_PREM"),16,0,64),1,240),substrb(dump(max("CORP_CHNG_DRT_BFM_UNEARN_PREM"),16,0,64),1,240),to_char(count("CORP_CHNG_DRT_THM_UNEARN_PREM")),substrb(dump(min("CORP_CHNG_DRT_THM_UNEARN_PREM"),16,0,64),1,240),substrb(dump(max("CORP_CHNG_DRT_THM_UNEARN_PREM"),16,0,64),1,240),to_char(count("CORP_CHNG_DRT_THM_PASS_PREM")),substrb(dump(min("CORP_CHNG_DRT_THM_PASS_PREM"),16,0,64),1,240),substrb(dump(max("CORP_CHNG_DRT_THM_PASS_PREM"),16,0,64),1,240),to_char(coun
+t("INWD_PREM")),substrb(dump(min(</FONT></TD>
+	</TR>
+
+<TR>
+	<TD><FONT FACE="Arial" SIZE="2">SYS</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">           1,130,966</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">                   5</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">             226,193</FONT></TD>
+	<TD><FONT FACE="Arial" SIZE="2">call dbms_stats.gather_database_stats_job_proc (  )</FONT></TD>
+	</TR>
+
+<TR>
+	<TD><FONT FACE="Arial" SIZE="2">SYS</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">             171,649</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">                   1</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">             171,649</FONT></TD>
+	<TD><FONT FACE="Arial" SIZE="2">/* SQL Analyze(1) */ select /*+  full(t)    no_parallel(t) no_parallel_index(t) dbms_stats cursor_sharing_exact use_weak_name_resl dynamic_sampling(0) no_monitoring xmlindex_sel_idx_tbl opt_param('optimizer_inmemory_aware' 'false') no_substrb_pad  */to_char(count("CORP_CHNG_INWD_PREM")),substrb(dump(min("CORP_CHNG_INWD_PREM"),16,0,64),1,240),substrb(dump(max("CORP_CHNG_INWD_PREM"),16,0,64),1,240),to_char(count("CORP_CHNG_INWD_TOT_PREM")),substrb(dump(min("CORP_CH
+NG_INWD_TOT_PREM"),16,0,64),1,240),substrb(dump(max("CORP_CHNG_INWD_TOT_PREM"),16,0,64),1,240),to_char(count("CORP_CHNG_INWD_TRMN_RET_AMT")),substrb(dump(min("CORP_CHNG_INWD_TRMN_RET_AMT"),16,0,64),1,240),substrb(dump(max("CORP_CHNG_INWD_TRMN_RET_AMT"),16,0,64),1,240),to_char(count("CORP_CHNG_OTNS_PREM")),substrb(dump(min("CORP_CHNG_OTNS_PREM"),16,0,64),1,240),substrb(dump(max("CORP_CHNG_OTNS_PREM"),16,0,64),1,240),to_char(count("CORP_CHNG_OTNS_TOT_PREM")),substrb(dump(min("CORP_CHNG_OTNS_TOT_PR
+EM"),16,0,64),1,240),substrb(dump</FONT></TD>
+	</TR>
+
+<TR>
+	<TD><FONT FACE="Arial" SIZE="2">IDGLOBAL</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">             470,856</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">                   6</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">              78,476</FONT></TD>
+	<TD><FONT FACE="Arial" SIZE="2">-- &lt;sqlFile&gt; sfmi/batch/globalagreement/insurancereturns/dao/maps/InsuranceReportDaoMap.xml &lt;/sqlFile&gt; -- &lt;sqlId&gt; GA.selectFSAReporingList &lt;/sqlId&gt; -- &lt;sql&gt;       SELECT AG01.PLCY_NO        , AG01.CONTOR_ID        , AG01.CONTOR_NAME        , ( SELECT IT03.INFO_VAL               FROM NPIT03TB_I IT03             WHERE IT03.FK_PLCY_NO = AG01.PLCY_NO               AND IT03.EVENT_NO   = AG07.EVENT_NO              AND IT03.INFO_CD    = '10
+018' -- ("10018",   "Producer ID")              AND IT03.SEQ_NUM    = ( SELECT MAX( IT03A.SEQ_NUM )              FROM NPIT03TB_I IT03A                WHERE IT03A.INFO_CD    = '10018'               AND IT03A.FK_PLCY_NO = AG01.PLCY_NO               AND IT03A.EVENT_NO   = AG07.EVENT_NO             )                              ) AS BROKER_CD        , ( SELECT IT03.INFO_VAL               FROM NPIT03TB_I IT03             WHERE IT03.FK_PLCY_NO = AG01.PLCY_NO               AND IT03.EVENT_NO   = AG07.E
+VENT_NO              AND IT03.INFO_CD    = '10003' -- ("10003",</FONT></TD>
+	</TR>
+
+<TR>
+	<TD><FONT FACE="Arial" SIZE="2">SYS</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">              57,878</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">                   1</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">              57,878</FONT></TD>
+	<TD><FONT FACE="Arial" SIZE="2">/* SQL Analyze(1) */ select /*+  full(t)    no_parallel(t) no_parallel_index(t) dbms_stats cursor_sharing_exact use_weak_name_resl dynamic_sampling(0) no_monitoring xmlindex_sel_idx_tbl opt_param('optimizer_inmemory_aware' 'false') no_substrb_pad  */to_char(count("CLOSE_YYMM")),substrb(dump(min("CLOSE_YYMM"),16,0,64),1,240),substrb(dump(max("CLOSE_YYMM"),16,0,64),1,240),to_char(count("RCIV_DATE")),substrb(dump(min("RCIV_DATE"),16,0,64),1,240),substrb(dump(max("RC
+IV_DATE"),16,0,64),1,240),to_char(count("RCIV_SEQ_NUM")),substrb(dump(min("RCIV_SEQ_NUM"),16,0,64),1,240),substrb(dump(max("RCIV_SEQ_NUM"),16,0,64),1,240),to_char(count("REF_NO")),substrb(dump(min("REF_NO"),16,0,64),1,240),substrb(dump(max("REF_NO"),16,0,64),1,240),to_char(count("PMT_OS_CLS")),substrb(dump(min("PMT_OS_CLS"),16,0,64),1,240),substrb(dump(max("PMT_OS_CLS"),16,0,64),1,240),to_char(count("PLCY_NO")),substrb(dump(min("PLCY_NO"),16,0,64),1,240),substrb(dump(max("PLCY_NO"),16,0,64),1,24
+0),to_char(count("COVR_CD")),subs</FONT></TD>
+	</TR>
+
+<TR>
+	<TD><FONT FACE="Arial" SIZE="2">SYS</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">              55,246</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">                   1</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">              55,246</FONT></TD>
+	<TD><FONT FACE="Arial" SIZE="2">/* SQL Analyze(1) */ select /*+  full(t)    no_parallel(t) no_parallel_index(t) dbms_stats cursor_sharing_exact use_weak_name_resl dynamic_sampling(0) no_monitoring xmlindex_sel_idx_tbl opt_param('optimizer_inmemory_aware' 'false') no_substrb_pad  */to_char(count("FK_BAS_MONTH")),substrb(dump(min("FK_BAS_MONTH"),16,0,64),1,240),substrb(dump(max("FK_BAS_MONTH"),16,0,64),1,240),to_char(count("FK_ACCOUNT_CD")),substrb(dump(min("FK_ACCOUNT_CD"),16,0,64),1,240),substr
+b(dump(max("FK_ACCOUNT_CD"),16,0,64),1,240),to_char(count("FK_DETL_ACNT_CD")),substrb(dump(min("FK_DETL_ACNT_CD"),16,0,64),1,240),substrb(dump(max("FK_DETL_ACNT_CD"),16,0,64),1,240),to_char(count("FK_CLIENT_NO")),substrb(dump(min("FK_CLIENT_NO"),16,0,64),1,240),substrb(dump(max("FK_CLIENT_NO"),16,0,64),1,240),to_char(count("FK_TERM_CD")),substrb(dump(min("FK_TERM_CD"),16,0,64),1,240),substrb(dump(max("FK_TERM_CD"),16,0,64),1,240),to_char(count("FK_CURRENCY_CD")),substrb(dump(min("FK_CURRENCY_CD"
+),16,0,64),1,240),substrb(dump(ma</FONT></TD>
+	</TR>
+
+<TR>
+	<TD><FONT FACE="Arial" SIZE="2">SYS</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">              53,963</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">                   1</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">              53,963</FONT></TD>
+	<TD><FONT FACE="Arial" SIZE="2">/* SQL Analyze(1) */ select /*+  full(t)    no_parallel(t) no_parallel_index(t) dbms_stats cursor_sharing_exact use_weak_name_resl dynamic_sampling(0) no_monitoring xmlindex_sel_idx_tbl opt_param('optimizer_inmemory_aware' 'false') no_substrb_pad  */to_char(count("FK_BAS_MONTH")),substrb(dump(min("FK_BAS_MONTH"),16,0,64),1,240),substrb(dump(max("FK_BAS_MONTH"),16,0,64),1,240),to_char(count("FK_PACKAGE_CLS")),substrb(dump(min("FK_PACKAGE_CLS"),16,0,64),1,240),subs
+trb(dump(max("FK_PACKAGE_CLS"),16,0,64),1,240),to_char(count("FK_CLIENT_NO")),substrb(dump(min("FK_CLIENT_NO"),16,0,64),1,240),substrb(dump(max("FK_CLIENT_NO"),16,0,64),1,240),to_char(count("FK_SPCL_CLS")),substrb(dump(min("FK_SPCL_CLS"),16,0,64),1,240),substrb(dump(max("FK_SPCL_CLS"),16,0,64),1,240),to_char(count("FK_AR_AP_CD")),substrb(dump(min("FK_AR_AP_CD"),16,0,64),1,240),substrb(dump(max("FK_AR_AP_CD"),16,0,64),1,240),to_char(count("FK_ACNT_CD")),substrb(dump(min("FK_ACNT_CD"),16,0,64),1,2
+40),substrb(dump(max("FK_ACNT_CD"</FONT></TD>
+	</TR>
+
+<TR>
+	<TD><FONT FACE="Arial" SIZE="2">DEVGLOBAL</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">           5,703,358</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">                 174</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">              32,778</FONT></TD>
+	<TD><FONT FACE="Arial" SIZE="2">SELECT  --REPORT_TYPE REPORT_TYPE,          -- MAIN.FK_PSTM_REF_NO,         MAIN.PLCY_NO PLCY_NO,          MAIN.EVENT_NO EVENT_NO,         MAX(MAIN.MKT_ID) MKT_ID,         MAX(MAIN.MKT_NAME) MKT_NAME,         MAX(MAIN.UW_ID) UW_ID,         MAX(MAIN.UW_NAME) UW_NAME,                 MAX(MAIN.APPROVE_DATE) APPROVE_DATE,         MAX(MAIN.APPROVER_ID) APPROVER_ID,         MAX(MAIN.APPROVER_NAME) APPROVER_NAME,         MAX(MAIN.ENDO_TYPE_NAME) ENDO_TYPE_NAM
+E,         MAX(MAIN.OLD_PLCY_NO) OLD_PLCY_NO,          MAX(MAIN.CEDENT_REFER_NO) CEDENT_REFER_NO,          MAX(MAIN.RISK_CATEGORY) RISK_CATEGORY,         MAIN.BAS_DATE BAS_DATE,          MAX(MAIN.BNS_CENTRE) BNS_CENTRE,          MAX(MAIN.PROD_CD) PROD_CD,          MAX(MAIN.PROD_NM) PROD_NM,   MAX(MAIN.PROD_NM2) PROD_NM2,         MAX(MAIN.AC_YEAR) AC_YEAR,          MAX(MAIN.AC_TYPE) AC_TYPE,          MAX(MAIN.INPUT_DATE) INPUT_DATE,          MAX(MAIN.PERIOD_FROM) PERIOD_FROM, 
+  MAX(MAIN.PERIOD_TO) PERIOD_TO, </FONT></TD>
+	</TR>
+
+<TR>
+	<TD><FONT FACE="Arial" SIZE="2">SYS</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">              87,970</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">                   5</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">              17,594</FONT></TD>
+	<TD><FONT FACE="Arial" SIZE="2">call dbms_space.auto_space_advisor_job_proc (  )</FONT></TD>
+	</TR>
+
+<TR>
+	<TD><FONT FACE="Arial" SIZE="2">DEVGLOBAL</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">              17,577</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">                   1</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">              17,577</FONT></TD>
+	<TD><FONT FACE="Arial" SIZE="2">    SELECT  AGING_TYPE,         CLIENT_NO,         CLIENT_NAME,         CLIENT_NAME,         CONTRACTOR_CD,         CONTRACTOR_NAME,         PEND_ACCOUNT_CD,         ACNT_NAME,         GROUP_CODE,         BCENTER,         PEND_NO,         POLICY_NO,         CLAIM_NO,         INVOICE_NO,         CURRENCY_CD,         ORC_AMT,         IDR_AMT_OLD,         IDR_AMT_NEW,         SALE_BAS,         PERIOD_FROM,         PERIOD_TO,         ACTL_DAT
+E,         COMM_SCHD_DATE,         EFFECTIVE_DATE,         SAILING_START_DATE,         SAILING_END_DATE,         CLOSING_DATE,         DATEOFLOSS,         NEW_AGING_DATE, -- NEW_AGING_COLUMN,         NEW_AGING_DESC,         ROUND(months_between(to_date('20200203', 'YYYYMMDD'), to_date(NEW_AGING_DATE,'YYYYMMDD')), 2) AS TOTAL_MONTH,         CASE             WHEN closing_date &lt;= new_aging_date THEN 1             WHEN ((months_between(to_date('20200203', 'YYYYMMDD'), to_date(NEW_AGIN
+G_DATE,'YYYYMMDD'))) &gt; 0) AND ((mont</FONT></TD>
+	</TR>
+
+<TR>
+	<TD><FONT FACE="Arial" SIZE="2">DEVGLOBAL</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">              35,154</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">                   2</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">              17,577</FONT></TD>
+	<TD><FONT FACE="Arial" SIZE="2">    SELECT  AGING_TYPE,         CLIENT_NO,         CLIENT_NAME,         CLIENT_NAME,         CONTRACTOR_CD,         CONTRACTOR_NAME,         PEND_ACCOUNT_CD,         ACNT_NAME,         GROUP_CODE,         BCENTER,         PEND_NO,         POLICY_NO,         CLAIM_NO,         INVOICE_NO,         CURRENCY_CD,         ORC_AMT,         IDR_AMT_OLD,         IDR_AMT_NEW,         SALE_BAS,         PERIOD_FROM,         PERIOD_TO,         ACTL_DAT
+E,         COMM_SCHD_DATE,         EFFECTIVE_DATE,         SAILING_START_DATE,         SAILING_END_DATE,         CLOSING_DATE,         DATEOFLOSS,         NEW_AGING_DATE, -- NEW_AGING_COLUMN,         NEW_AGING_DESC,         ROUND(months_between(to_date('20200204', 'YYYYMMDD'), to_date(NEW_AGING_DATE,'YYYYMMDD')), 2) AS TOTAL_MONTH,         CASE             WHEN closing_date &lt;= new_aging_date THEN 1             WHEN ((months_between(to_date('20200204', 'YYYYMMDD'), to_date(NEW_AGIN
+G_DATE,'YYYYMMDD'))) &gt; 0) AND ((mont</FONT></TD>
+	</TR>
+
+<TR>
+	<TD><FONT FACE="Arial" SIZE="2">DEVGLOBAL</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">              35,154</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">                   2</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">              17,577</FONT></TD>
+	<TD><FONT FACE="Arial" SIZE="2">    SELECT  AGING_TYPE,         CLIENT_NO,         CLIENT_NAME,         CLIENT_NAME,         CONTRACTOR_CD,         CONTRACTOR_NAME,         PEND_ACCOUNT_CD,         ACNT_NAME,         GROUP_CODE,         BCENTER,         PEND_NO,         POLICY_NO,         CLAIM_NO,         INVOICE_NO,         CURRENCY_CD,         ORC_AMT,         IDR_AMT_OLD,         IDR_AMT_NEW,         SALE_BAS,         PERIOD_FROM,         PERIOD_TO,         ACTL_DAT
+E,         COMM_SCHD_DATE,         EFFECTIVE_DATE,         SAILING_START_DATE,         SAILING_END_DATE,         CLOSING_DATE,         DATEOFLOSS,         NEW_AGING_DATE, -- NEW_AGING_COLUMN,         NEW_AGING_DESC,         ROUND(months_between(to_date('20200101', 'YYYYMMDD'), to_date(NEW_AGING_DATE,'YYYYMMDD')), 2) AS TOTAL_MONTH,         CASE             WHEN closing_date &lt;= new_aging_date THEN 1             WHEN ((months_between(to_date('20200101', 'YYYYMMDD'), to_date(NEW_AGIN
+G_DATE,'YYYYMMDD'))) &gt; 0) AND ((mont</FONT></TD>
+	</TR>
+
+<TR>
+	<TD><FONT FACE="Arial" SIZE="2">DEVGLOBAL</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">              70,308</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">                   4</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">              17,577</FONT></TD>
+	<TD><FONT FACE="Arial" SIZE="2">    SELECT  AGING_TYPE,         CLIENT_NO,         CLIENT_NAME,         CLIENT_NAME,         CONTRACTOR_CD,         CONTRACTOR_NAME,         PEND_ACCOUNT_CD,         ACNT_NAME,         GROUP_CODE,         BCENTER,         PEND_NO,         POLICY_NO,         CLAIM_NO,         INVOICE_NO,         CURRENCY_CD,         ORC_AMT,         IDR_AMT_OLD,         IDR_AMT_NEW,         SALE_BAS,         PERIOD_FROM,         PERIOD_TO,         ACTL_DAT
+E,         COMM_SCHD_DATE,         EFFECTIVE_DATE,         SAILING_START_DATE,         SAILING_END_DATE,         CLOSING_DATE,         DATEOFLOSS,         NEW_AGING_DATE, -- NEW_AGING_COLUMN,         NEW_AGING_DESC,         ROUND(months_between(to_date('20200131', 'YYYYMMDD'), to_date(NEW_AGING_DATE,'YYYYMMDD')), 2) AS TOTAL_MONTH,         CASE             WHEN closing_date &lt;= new_aging_date THEN 1             WHEN ((months_between(to_date('20200131', 'YYYYMMDD'), to_date(NEW_AGIN
+G_DATE,'YYYYMMDD'))) &gt; 0) AND ((mont</FONT></TD>
+	</TR>
+
+<TR>
+	<TD><FONT FACE="Arial" SIZE="2">DEVGLOBAL</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">              10,028</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">                   1</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">              10,028</FONT></TD>
+	<TD><FONT FACE="Arial" SIZE="2">SELECT  A.PEND_NO,         POLICY_NO,          CLAIM_NO,          EVENT_NO,          E.trx_type TRANS_TYPE,         A.ACTL_DATE BAS_DATE,          A.PEND_REF_NO VOUCHER_NO,         A.INVOICE_NO,          CASE               WHEN  (substr(A.prod_cd, 1, 2) = '02' )                   OR (A.prod_cd in ('07002')) THEN 'EN'             WHEN  (substr(A.prod_cd, 1, 2) = '01')                      OR (A.prod_cd in ('07001', '07006')) THEN 'FR'             WHEN
+  ((substr(A.prod_cd, 1, 2) = '04') AND (A.prod_cd != '04101'))                   OR (A.prod_cd in ('07003')) THEN   'MC'             WHEN    A.prod_cd in ('07008', '04101') THEN 'MH'             WHEN  (substr(A.prod_cd, 1, 2) = '03') OR (A.prod_cd in ('07004', '07007'))                  OR mng_ref_no1 in ('201101X07001211', '201101X08001221') THEN 'MS'             WHEN  SUBSTR(A.prod_cd, 1, 2) in ('MV') or (A.prod_cd in ('07005'))                  OR mng_ref_no1 in ('201001X10002211', '20
+1001X11002221') THEN 'MV'       </FONT></TD>
+	</TR>
+
+<TR>
+	<TD><FONT FACE="Arial" SIZE="2">DEVGLOBAL</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">              83,235</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">                  17</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">               4,896</FONT></TD>
+	<TD><FONT FACE="Arial" SIZE="2">SELECT  AGING_TYPE,         CLIENT_NO,         CLIENT_NAME,         CLIENT_NAME,         CONTRACTOR_CD,         CONTRACTOR_NAME,         PEND_ACCOUNT_CD,         ACNT_NAME,         GROUP_CODE,         BCENTER,         PEND_NO,         POLICY_NO,         CLAIM_NO,         INVOICE_NO,         CURRENCY_CD,         ORC_AMT,         IDR_AMT_OLD,         IDR_AMT_NEW,         SALE_BAS,         PERIOD_FROM,         PERIOD_TO,         ACTL_DATE,
+    COMM_SCHD_DATE,         EFFECTIVE_DATE,         SAILING_START_DATE,         SAILING_END_DATE,         CLOSING_DATE,         DATEOFLOSS,         NEW_AGING_DATE, -- NEW_AGING_COLUMN,         NEW_AGING_DESC,         ROUND(months_between(to_date('20200204', 'YYYYMMDD'), to_date(NEW_AGING_DATE,'YYYYMMDD')), 2) AS TOTAL_MONTH,         CASE             WHEN closing_date &lt;= new_aging_date THEN 1             WHEN ((months_between(to_date('20200204', 'YYYYMMDD'), to_date(NEW_AGING_DATE,'
+YYYYMMDD'))) &gt; 0) AND ((months_betwe</FONT></TD>
+	</TR>
+
+<TR>
+	<TD><FONT FACE="Arial" SIZE="2">DEVGLOBAL</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">              96,069</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">                  23</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">               4,177</FONT></TD>
+	<TD><FONT FACE="Arial" SIZE="2">SELECT  AGING_TYPE,         CLIENT_NO,         CLIENT_NAME,         CLIENT_NAME,         CONTRACTOR_CD,         CONTRACTOR_NAME,         PEND_ACCOUNT_CD,         ACNT_NAME,         GROUP_CODE,         BCENTER,         PEND_NO,         POLICY_NO,         CLAIM_NO,         INVOICE_NO,         CURRENCY_CD,         ORC_AMT,         IDR_AMT_OLD,         IDR_AMT_NEW,         SALE_BAS,         PERIOD_FROM,         PERIOD_TO,         ACTL_DATE,
+    COMM_SCHD_DATE,         EFFECTIVE_DATE,         SAILING_START_DATE,         SAILING_END_DATE,         CLOSING_DATE,         DATEOFLOSS,         NEW_AGING_DATE, -- NEW_AGING_COLUMN,         NEW_AGING_DESC,         ROUND(months_between(to_date('20200203', 'YYYYMMDD'), to_date(NEW_AGING_DATE,'YYYYMMDD')), 2) AS TOTAL_MONTH,         CASE             WHEN closing_date &lt;= new_aging_date THEN 1             WHEN ((months_between(to_date('20200203', 'YYYYMMDD'), to_date(NEW_AGING_DATE,'
+YYYYMMDD'))) &gt; 0) AND ((months_betwe</FONT></TD>
+	</TR>
+
+<TR>
+	<TD><FONT FACE="Arial" SIZE="2">DEVGLOBAL</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">              98,208</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">                  24</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">               4,092</FONT></TD>
+	<TD><FONT FACE="Arial" SIZE="2">SELECT  AGING_TYPE,         CLIENT_NO,         CLIENT_NAME,         CLIENT_NAME,         CONTRACTOR_CD,         CONTRACTOR_NAME,         PEND_ACCOUNT_CD,         ACNT_NAME,         GROUP_CODE,         BCENTER,         PEND_NO,         POLICY_NO,         CLAIM_NO,         INVOICE_NO,         CURRENCY_CD,         ORC_AMT,         IDR_AMT_OLD,         IDR_AMT_NEW,         SALE_BAS,         PERIOD_FROM,         PERIOD_TO,         ACTL_DATE,
+    COMM_SCHD_DATE,         EFFECTIVE_DATE,         SAILING_START_DATE,         SAILING_END_DATE,         CLOSING_DATE,         DATEOFLOSS,         NEW_AGING_DATE, -- NEW_AGING_COLUMN,         NEW_AGING_DESC,         ROUND(months_between(to_date('20200202', 'YYYYMMDD'), to_date(NEW_AGING_DATE,'YYYYMMDD')), 2) AS TOTAL_MONTH,         CASE             WHEN closing_date &lt;= new_aging_date THEN 1             WHEN ((months_between(to_date('20200202', 'YYYYMMDD'), to_date(NEW_AGING_DATE,'
+YYYYMMDD'))) &gt; 0) AND ((months_betwe</FONT></TD>
+	</TR>
+
+<TR>
+	<TD><FONT FACE="Arial" SIZE="2">DEVGLOBAL</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">              70,494</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">                  22</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">               3,204</FONT></TD>
+	<TD><FONT FACE="Arial" SIZE="2">SELECT  AGING_TYPE,         CLIENT_NO,         CLIENT_NAME,         CLIENT_NAME,         CONTRACTOR_CD,         CONTRACTOR_NAME,         PEND_ACCOUNT_CD,         ACNT_NAME,         GROUP_CODE,         BCENTER,         PEND_NO,         POLICY_NO,         CLAIM_NO,         INVOICE_NO,         CURRENCY_CD,         ORC_AMT,         IDR_AMT_OLD,         IDR_AMT_NEW,         SALE_BAS,         PERIOD_FROM,         PERIOD_TO,         ACTL_DATE,
+    COMM_SCHD_DATE,         EFFECTIVE_DATE,         SAILING_START_DATE,         SAILING_END_DATE,         CLOSING_DATE,         DATEOFLOSS,         NEW_AGING_DATE, -- NEW_AGING_COLUMN,         NEW_AGING_DESC,         ROUND(months_between(to_date('20200201', 'YYYYMMDD'), to_date(NEW_AGING_DATE,'YYYYMMDD')), 2) AS TOTAL_MONTH,         CASE             WHEN closing_date &lt;= new_aging_date THEN 1             WHEN ((months_between(to_date('20200201', 'YYYYMMDD'), to_date(NEW_AGING_DATE,'
+YYYYMMDD'))) &gt; 0) AND ((months_betwe</FONT></TD>
+	</TR>
+
+<TR>
+	<TD><FONT FACE="Arial" SIZE="2">IDGLOBAL</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">              19,643</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">                   7</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">               2,806</FONT></TD>
+	<TD><FONT FACE="Arial" SIZE="2">-- &lt;sqlFile&gt; sfmi/batch/globalagreement/insurancereturns/dao/maps/InsuranceReportDaoMap.xml &lt;/sqlFile&gt; -- &lt;sqlId&gt; GA.selectDeductionReportingList &lt;/sqlId&gt; -- &lt;sql&gt;       SELECT AG01.PLCY_NO              , AG07.EVENT_NO              , AG07.ENDO_TYPE              , AG07.ENDO_BAS_DATE              , (SELECT MAX(EXCHNG_RT_APPL_DT) -- 환율적용일자                   FROM NPPM05TB_I -- 계약Deduction통화                  WHERE FK_PLCY_NO = A
+G01.PLCY_NO                     AND EVENT_NO   = AG07.EVENT_NO                  )                  AS EXCHNG_RT_APPL_DT              , NVL((SELECT SUM(PM05.CORP_CHNG_SS_DDCT_AMT) -- 법인환산 삼성_Deduction금액                      FROM NPPM04TB_I PM04 -- 계약Deduction                         , NPPM05TB_I PM05                     WHERE PM04.FK_PLCY_NO = AG01.PLCY_NO                       AND PM04.EVENT_NO   = AG07.EVENT_NO                       AND PM04.DDCT_CLS  IN ('01', '02') -- Deduction구분
+                      AND PM04.FK_PLCY_NO</FONT></TD>
+	</TR>
+
+<TR>
+	<TD><FONT FACE="Arial" SIZE="2">SYS</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">              43,136</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">                  42</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">               1,027</FONT></TD>
+	<TD><FONT FACE="Arial" SIZE="2">insert into wri$_adv_objspace_trend_data select timepoint,  space_usage, space_alloc, quality from  table(dbms_space.object_growth_trend(:1, :2, :3, :4, NULL, NULL,  NULL, 'FALSE', :5, 'FALSE'))</FONT></TD>
+	</TR>
+
+<TR>
+	<TD><FONT FACE="Arial" SIZE="2">SYS</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">              43,110</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">                  42</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">               1,026</FONT></TD>
+	<TD><FONT FACE="Arial" SIZE="2">SELECT U.SPACE_USED, U.SPACE_ALLOCATED FROM TABLE(DBMS_SPACE.OBJECT_SPACE_USAGE_TBF( :B1 , :B2 , :B3 , 0, :B4 , 'TRUE', :B5 )) U</FONT></TD>
+	</TR>
+
+<TR>
+	<TD><FONT FACE="Arial" SIZE="2">IDGLOBAL</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">             116,731</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">                 361</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">                 323</FONT></TD>
+	<TD><FONT FACE="Arial" SIZE="2">SELECT A.BSNS_FILE_CLS                          , A.PSTM_REF_NO                          , A.SLIP_DEPT                          , A.BAS_DATE                          , COUNT(*)  AS CNT        FROM NFAS01TB_I A, NFAS02TB_I B       WHERE B.FK_BSNS_FILE_CLS = A.BSNS_FILE_CLS         AND B.FK_PSTM_REF_NO   = A.PSTM_REF_NO         AND B.SAP_SEND_YN     != 'Y'       GROUP BY A.BSNS_FILE_CLS, A.PSTM_REF_NO, A.BAS_DATE, A.SLIP_DEPT</FONT></TD>
+	</TR>
+
+<TR>
+	<TD><FONT FACE="Arial" SIZE="2">IDGLOBAL</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">              35,939</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">               2,590</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">                  14</FONT></TD>
+	<TD><FONT FACE="Arial" SIZE="2">SELECT  CASE WHEN IF01.COVR_CATG IS NULL OR IF01.COVR_CATG = ' '                            THEN (SELECT X.DATA_VAL1 FROM  NCGR18TB_I  X                   WHERE X.CODE_CHNG_TYPE = '0001'                      AND X.CPSN_VAL1      = IF01.PROD_CD )                            ELSE IF01.COVR_CATG                        END covrCatg,                         IF01.PROD_CD                  prodCd            ,                          IF01.LOB_DTL                  lobDtl
+          ,                          IF01.CORP_CUST_TYPE           corpCustType      ,                             IF01.BRANCH_CLS               branchCls         ,                             IF01.OCC_CHNL_CLS             occChnlCls        ,                             IF01.AGRM_TYP                 agrmTyp           ,                             IF01.ACCT_TYPE                acctType          ,                            IF01.AGRM_STT                 agrmStt           ,
+   IF01.TERM_INS_YN              </FONT></TD>
+	</TR>
+
+<TR>
+	<TD><FONT FACE="Arial" SIZE="2">IDGLOBAL</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">              25,677</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">             267,990</FONT></TD>
+	<TD ALIGN="CENTER"><FONT FACE="Arial" SIZE="2">                   0</FONT></TD>
+	<TD><FONT FACE="Arial" SIZE="2">SELECT               T.AMT_CLS      AS amtCls             ,T.THIS_CLOSE_YYMM    AS closeYymm             ,T.PLCY_NO          AS plcyNo             ,T.PREM_CLS         AS premCls             ,T.PMT_SEQ       AS pmtSeq             ,T.OTNS_ENDO_NO      AS otnsEndoNo             ,T.COVR_CD          AS covrCd             ,T.ENDO_NO          AS endoNo             ,T.SPCL_IMI_CLS     AS spclImiCls             ,T.SPCL_CONT_CD     AS spclContCd    ,CASE WHEN SPCL_IMI_CLS
+= '1' THEN         (SELECT CD_DETL_NAME             FROM NCGR05TB_I X           WHERE X.CD_DETL_NO  = T.SPCL_CONT_CD               AND X.FK_CD_KD_NO = 4001)     ELSE '' END        AS spclContNm             ,(SELECT TREATY_TYPE     FROM  NROC00TB_I       WHERE SPCL_MONTH   = T.SPCL_MONTH      AND SPCL_NAME_CD = T.SPCL_CONT_CD      AND OTIN_TYPE    = T.OTIN_TYPE     )                              AS spclContType             ,T.DEAL_LINE_CD     AS dealLineCd    ,(SELECT INS_DLER_NAME from NROC40TB_
+I     WHERE INS_DLER_CD = T.DEAL_</FONT></TD>
+	</TR>
+
+</TABLE><BR>
+<FORM ACTION="../source/listsql1.htm" METHOD=GET>
+<INPUT TYPE=submit NAME=foo VALUE="Source Code"></FORM>
+</FONT></CENTER>
+<SCRIPT LANGUAGE="JavaScript" SRC="footer.js"></SCRIPT>
+</BODY></HTML>

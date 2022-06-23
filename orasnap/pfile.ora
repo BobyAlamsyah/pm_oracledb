@@ -1,0 +1,29 @@
+rtgs2drc.__db_cache_size=7583301632
+rtgs2drc.__java_pool_size=469762048
+rtgs2drc.__large_pool_size=134217728
+rtgs2drc.__oracle_base='D:\App\ADMINISTRATOR'#ORACLE_BASE set from environment
+rtgs2drc.__pga_aggregate_target=8254390272
+rtgs2drc.__sga_target=12348030976
+rtgs2drc.__shared_io_pool_size=0
+rtgs2drc.__shared_pool_size=3892314112
+rtgs2drc.__streams_pool_size=134217728
+*.audit_file_dest='D:\App\ADMINISTRATOR\admin\rtgs2drc\adump'
+*.audit_trail='db'
+*.compatible='11.2.0.4.0'
+*.control_files='D:\ORADATA\rtgs2drc\control01.ctl','D:\App\ADMINISTRATOR\fast_recovery_area\rtgs2drc\control02.ctl'
+*.db_block_size=8192
+*.db_domain=''
+*.db_name='rtgs2drc'
+*.db_recovery_file_dest='D:\App\ADMINISTRATOR\fast_recovery_area'
+*.db_recovery_file_dest_size=4385144832
+*.diagnostic_dest='D:\App\ADMINISTRATOR'
+*.dispatchers='(PROTOCOL=TCP) (SERVICE=rtgs2drcXDB)'
+*.enable_goldengate_replication=TRUE
+*.log_archive_dest_1='LOCATION=D:\Archive'
+*.log_archive_format='ARC%S_%R.%T'
+*.memory_target=20600324096
+*.open_cursors=300
+*.processes=150
+*.recyclebin='OFF'
+*.remote_login_passwordfile='EXCLUSIVE'
+*.undo_tablespace='UNDOTBS1'
