@@ -20,3 +20,6 @@ cat /proc/cpuinfo | grep "model name"
 cat /proc/cpuinfo | grep "model name" | wc -l
 cat /etc/hosts
 cat /etc/sysctl.conf
+$ORACLE_HOME/OPatch/opatch version
+$ORACLE_HOME/OPatch/opatch lsinventory
+$ORACLE_HOME/OPatch/opatch lspatches
