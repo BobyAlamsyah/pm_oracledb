@@ -36,6 +36,25 @@ SELECT /*+ PARALLEL(2)*/ RESOURCE_NAME, CURRENT_UTILIZATION CUR_UTIL, MAX_UTILIZ
 --SELECT NAME,TYPE,DISPLAY_VALUE FROM V$PARAMETER ORDER BY 1;
 SHO PARAMETER;
 
+--User All Object
+set linesize 3000;
+select   USERNAME,
+         count(decode(o.TYPE#, 2,o.OBJ#,'')),
+         count(decode(o.TYPE#, 1,o.OBJ#,'')),
+         count(decode(o.TYPE#, 5,o.OBJ#,'')),
+         count(decode(o.TYPE#, 4,o.OBJ#,'')),
+         count(decode(o.TYPE#, 6,o.OBJ#,'')),
+         count(decode(o.TYPE#, 7,o.OBJ#,'')),
+         count(decode(o.TYPE#, 8,o.OBJ#,'')),
+         count(decode(o.TYPE#, 9,o.OBJ#,'')),
+         count(decode(o.TYPE#,12,o.OBJ#,'')),
+         count(decode(o.TYPE#,10,o.OBJ#,''))
+from     sys.obj$ o, dba_users u
+where    u.USER_ID = o.OWNER# (+)
+and      o.TYPE# is NOT NULL
+group by USERNAME
+order by USERNAME;
+
 --Invalid Objects
 SET LINES 160 PAGES 5000 TIMING ON TRIM ON ECHO ON;
 SELECT COUNT(1)INV_OBJ FROM DBA_OBJECTS WHERE STATUS='INVALID';
@@ -340,6 +359,16 @@ FROM (SELECT COMMAND_ID, START_TIME, TIME_TAKEN_DISPLAY, STATUS, INPUT_TYPE, OUT
 --DBA Jobs
 set linesize 2000;
 select job,log_user,last_date,this_date,next_date,broken,failures,what from dba_jobs;
+
+--DB Link
+set linesize 3000;
+select   OWNER,
+         DB_LINK,
+         USERNAME,
+         HOST,
+         to_char(CREATED,'MM/DD/YYYY HH24:MI:SS')
+from     dba_db_links
+order by OWNER,DB_LINK;
 
 --Check block corruption
 SELECT * FROM V$DATABASE_BLOCK_CORRUPTION;
